@@ -126,3 +126,6 @@ git pull
 📌 원격 저장소의 변경된 사항을 로컬 저장소로 불러오기만 함( 병합X)
 
 git fetch
+
+
+블로그 원글 - https://zzangyeon.tistory.com/36?category=512841
