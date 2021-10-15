@@ -25,3 +25,30 @@ CSRF : 사이트 간 요청 위조 방어용 토큰을 생성해 HttpSession에 
 일반적으로 아이디/암호를 이용해서 인증 처리
 인가 (Authorize)
 현재 사용자가 특정 대상 (URL, 기능 등)을 사용(접근)할 권한이 있는지 검사하는 것
+
+스프링 시큐리티와 보안 3요소 의 매칭
+
+
+Authentication과 SecurityContext
+Authentication 용도
+현재 접근 주체 정보를 담는 목적
+인증 요청할때, 요청 정보를 담는 목적
+SecurityContext
+Authentication을 보관
+스프링 시큐리티는 현재 사용자에대한 Authentication을 객체를 구할 때 SecurityContext로부터 구함
+SecurityContext를 기본적으로 쓰레드로컬에 SecurityContext에 보관
+Authentication의 주요 메서드
+String getName(): 사용자의 이름
+Obejct getCredential() : 증명 값(비밀번호 등)
+boolean isAuthenticated() : 인증 여부
+Collection getAuthroities() : 현재 사용자가 가진 권한
+AuthenticationManager
+인증을 처리함
+인증에 성공하면 인증 정로를 담고 있는 Authentication 객체를 리턴
+스프링 시큐리티는 리턴한 Authentication 객체를 SecurityContext에 보관 및 인증 상태를 유지하기 위해 세션 보관
+인증 실패시 AuthenticationException을 발생시킴
+(Abstract) SecurityInterceptor
+인가 처리를 담당
+웹의 경우 FilterSecurityInterceptor 구현 사용
+AccessDesicionManager에 권한 검사 위임
+사용자가 자신의 보안 설정 기준으로 접근 권한이 없는 경우 익셉션 발생
