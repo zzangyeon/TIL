@@ -52,3 +52,60 @@ AuthenticationManager
 웹의 경우 FilterSecurityInterceptor 구현 사용
 AccessDesicionManager에 권한 검사 위임
 사용자가 자신의 보안 설정 기준으로 접근 권한이 없는 경우 익셉션 발생
+
+웹 요청을 FilterChaninProxy 적용
+
+
+보안 필터 체인의 주요 구성 요소
+
+
+Security Authentication
+
+
+필터를 통해서 request가 들어옴
+Security 가장 앞단에 있는 것은 username password Authentication 필터, CORS 필터 등이 있음
+필터를 거처 인증 요청 객체러 변환됨
+인증 요청 객체로 만들어 Provider Manager로 전달됨
+이터레이터를 돌면서 클래스에 맞는 Provider 인증처리 진행
+인증된 객체 리턴
+isAuthentication의 true가 담겨서 리턴
+SecirtyContext Holder에 LocalThread에 담겨서 필요한 순간에 뿌려줄 수 있게됨
+
+
+AuthenticationManager : AuthenticationProvider 주머니
+Builder 패턴으로 구현
+등록된 Authenticaion Provider들에 접근하는 유일한 객체
+단순한 인터페이스에 불과하다. 내장 구현체: ProviderManager
+AuthenticationManager를 구현해서 쓰지말자. Pivtal 기술자 보다 더 만들 자신 없으면
+구현해서 쓰라고 넣어준 인터페이스 아니다. 직접 구현하지 말라는 것이다.
+AuthenticationProvider: 진짜 인증이 일어나는 곳
+인증전 객체를 받아 인증 가능 여부를 확인한후, 예외를 던지던 인증후 객체를 만들어 돌려준다.
+구현하라고 넣어준 인터페이스이다.
+필요에 맞게 정교하게 구현하고 인증 관리자에게 등록시키자.
+인증 객체는 ?
+Authentication 클래스의 모든 서브 클래스
+
+UsernamePasswordAuthenticationToken
+기본적으로 유저네임과 비밀번호를 받는 방식
+인증전 객체이다.
+인증이 완료된 객체는 authroities 객체가 담겨있다.
+결국 우리가 구현해야 할것
+요청을 받아낼 필터(AbstractAuthenticaionFilter)
+Manager에 등록시킬 Auth Provider
+인증 정보를 담을 DTO
+각 인증에 따른 추가 구현체, 기본적인 성공/실패 핸들러.
+소셜 인증의 경우 각 소셜 공급자 구경에 맞는 DTO와 Http Request
+인증 시도 / 인증 성송시에 각각 사용할 Authentication 객체
+Configure (HttpSecurity http) 정리
+authorizeRequests
+가장 기본적인 예는 "ROLE_USER"역할이 필요하도록 모든 URL을 구성하는 것입니다. 아래의 구성은 모든 URL에 대한 인증을 요구하며 "admin"및 "user"사용자 모두에게 액세스 권한을 부여합니다.
+인증 매커니즘을 요청한 HttpServletRequest 기반으로 설정합니다.
+antMachers() : 요청 패턴을 리스트 형식으로 설정합니다.
+permitAll() : 설정한 리퀘스트 패턴을 누구나 접근할 수 있도록 허용합니다.
+anyRequest() : 설정한 요청 이외의 리퀘스트 요청을 표현합니다.
+authenticated() : 해당 요청은 인증된 사용자만 할 수 있습니다.
+authenticationEntiyPoint(new LoginUrlAuthenticationEntryPoint("/login")) : 인증된 진입 지점입니다. 인증되지 않은 사용자가 허용되지 않은 경로 리퀘쓰트를 오쳥할 경우 /login 으로 이동됩니다.
+참고
+스프링5 레시피
+스프링 시큐리티 구조 이해
+봄이네집 스프링 - (1) Spring Security - Auth0 JWT Library
