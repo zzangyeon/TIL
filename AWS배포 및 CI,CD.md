@@ -17,7 +17,7 @@
 
  
 
-1. 수동 배포
+## 1. 수동 배포
 github에 프로젝트 푸쉬 후 EC2서버에서 - git clone  or  git pull
 테스트 및 빌드  - gradlew test / gradlew clean build (gradle이 없는 환경에서도 gradlew로 빌드가능하다)
 [ 주의 ! github에는 중요한 정보가 담긴 설정파일을 올리면 안 된다. (RDS 아이디 비번, OAUTH 설정정보 등)
@@ -26,7 +26,7 @@ github에 프로젝트 푸쉬 후 EC2서버에서 - git clone  or  git pull
 
  
 
-2. 자동화 CI/CD
+## 2. 자동화 CI/CD
 로컬에서 코드작성 -> 깃헙에 push -> (자동)Travis CI 에서 테스트 및 빌드후 -> S3에 저장 
 
 -> codeDeploy가 S3에 저장된 빌드파일 EC2에 배포-> EC2에서 무중단 배포를 위해 NGINX 서버 띄움
