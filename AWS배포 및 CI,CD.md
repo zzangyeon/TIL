@@ -20,6 +20,7 @@
 ## 1. 수동 배포
 github에 프로젝트 푸쉬 후 EC2서버에서 - git clone  or  git pull
 테스트 및 빌드  - gradlew test / gradlew clean build (gradle이 없는 환경에서도 gradlew로 빌드가능하다)
+
 *주의 ! github에는 중요한 정보가 담긴 설정파일을 올리면 안 된다. (RDS 아이디 비번, OAUTH 설정정보 등)
 각 설정 파일들은 운영서버가 직접 갖고 있고, 실행시 그 파일 위치를 지정해줘야한다.*
 
