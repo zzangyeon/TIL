@@ -36,7 +36,7 @@ github에 프로젝트 푸쉬 후 EC2서버에서 - git clone  or  git pull
 <기본버전> (무중단 배포X)
 
 
-<무중단배포>
+<무중단배포 >
 
 
  
