@@ -7,7 +7,8 @@ Tomcat
 
 Process
 
-1![image](https://user-images.githubusercontent.com/79262461/138560422-1d38f07a-fffe-4cf2-8ba3-39558023224a.png
+![image](https://user-images.githubusercontent.com/79262461/138560492-f9900b37-f959-4daa-8da6-49ea4f31be76.png)
+
 
 
 일반적으로 자바 웹프로그래밍을 할때 사용하는 Spring + Tomcat 조합으로 서비스를 올리게되면 위와같은 구조를 통해 클라이언트와 통신 하게 됩니다.
