@@ -6,6 +6,7 @@ Tomcat
 이번 포스팅에서는 개발자가 Spring으로 작성한 웹 프로그램이 Apache Tomcat을 이용해 웹 서비스로 등록되게 되면 어떤 프로세스로 Client의 요청을 처리하는지에 대해서 알아보도록 하겠습니다.
 
 Process
+
 1![image](https://user-images.githubusercontent.com/79262461/138560422-1d38f07a-fffe-4cf2-8ba3-39558023224a.png
 
 
