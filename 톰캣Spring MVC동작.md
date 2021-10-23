@@ -127,6 +127,8 @@ Controller에서 view를 return 했을경우 해당하는 view를 찾아 client�
 
 
 Servlet container
+![image](https://user-images.githubusercontent.com/79262461/138560525-67ead38e-ea8c-4f9d-a954-ffe317678b3f.png)
+
 탐캣의 메인 기능이라고 할 수 있는 서블릿 컨테이너(Servlet container)의 역할을 알아보독 하겠습니다. 첫째로 서블릿 컨테이너라는 말 그대로 서블릿을 관리하는 역할을 하게 됩니다. 위의 서블릿을 알아보면서 서블릿 라이프사이클( init > service > destroy)을 알아보았는데 서블릿 클래스의 로드, 초기화, 호출, 소멸까지의 라이프사이클을 직접적으로 관리해주는 역할을 하는것이 바로 서블릿컨테이너입니다. 서블릿으로 구현된 DispatcherServlet 역시 서블릿 컨테이너에서 수행됩니다.
 
 둘째, 상단 Process 그림에서 보셨던것 처럼 서블릿 컨테이너는 웹서버와 통신을 통해 클라이언트의 request를 전달받아 동적 서비스를 response를 해야하는데, 해당 통신을 위해 소켓을 만드는등의 역할을 진행합니다.
