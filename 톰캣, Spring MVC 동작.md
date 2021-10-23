@@ -6,7 +6,8 @@ Tomcat
 이번 포스팅에서는 개발자가 Spring으로 작성한 웹 프로그램이 Apache Tomcat을 이용해 웹 서비스로 등록되게 되면 어떤 프로세스로 Client의 요청을 처리하는지에 대해서 알아보도록 하겠습니다.
 
 Process
-1
+1![image](https://user-images.githubusercontent.com/79262461/138560422-1d38f07a-fffe-4cf2-8ba3-39558023224a.png
+
 
 일반적으로 자바 웹프로그래밍을 할때 사용하는 Spring + Tomcat 조합으로 서비스를 올리게되면 위와같은 구조를 통해 클라이언트와 통신 하게 됩니다.
 
@@ -51,7 +52,9 @@ init > service > destroy
 
 javaEE로 웹서비스를 직접 구현할때에는 서블릿을 만들기 위해 위의 Servlet 인터페이스의 구현체를 직접 만들어 사용 했지만, 스프링MVC 에서는 Dispatcher Servlet이라는 모든 요청을 담당하는 서블릿을 두고 컨트롤러에 위임을 하여 요청을 처리합니다.
 
-2
+
+![image](https://user-images.githubusercontent.com/79262461/138560439-7ea7c810-e619-42f6-ad04-251131f8deba.png)
+
 
 이와같은 프론트 컨트롤러 디자인 패턴이 적용된 SpringMVC를 통해 개발자는 별도의 서블릿 개발없이, Controller의 구현만으로도 동적인 response를 클라이언트에게 줄 수 있습니다.
 
