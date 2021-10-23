@@ -145,6 +145,9 @@ Spring container
 서블릿 컨테이너는 서블릿의 생명주기를 관리했다면, 스프링컨테이너는 Java object인 빈(Bean)의 라이프 사이클 관리하여 Spring 프레임워크의 특징인 IOC(제어역전)와 DI(의존성주입)을 제공해주는 역할을 합니다.
 
 총정리
+![image](https://user-images.githubusercontent.com/79262461/138560534-d4408447-5309-4b57-b2bb-60cfc4b495d7.png)
+
+
 위의 내용들을 바탕으로 클라이언트의 request부터 response 받는 흐름을 총정리 해보도록 하겠습니다.
 
 6
