@@ -21,6 +21,6 @@
   - **예외처리가 불편하다.**
     - 프로그래머 검사가 필요한 예외가 등장한다면 무조건 프로그래머가 선언을 해줘야 한다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+(https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://yolojeb.tistory.com/17](http://yolojeb.tistory.com/17)
 > - [http://huhghiza.tistory.com/7](http://huhghiza.tistory.com/7)
