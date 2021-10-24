@@ -122,3 +122,35 @@ class FeaturePhone implements Phone {
 > - [http://loustler.io/languages/oop_interface_and_abstract_class/](http://loustler.io/languages/oop_interface_and_abstract_class/)
 > - [http://alecture.blogspot.com/2011/05/abstract-class-interface.html](http://alecture.blogspot.com/2011/05/abstract-class-interface.html)
 
+### JVM 구조
+
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [http://www.itworld.co.kr/news/110837](http://www.itworld.co.kr/news/110837)
+> - [http://hoonmaro.tistory.com/19](http://hoonmaro.tistory.com/19)
+
+### Java Collections Framework
+<img src="./images/java-collections-framework.png" width="70%" height="70%">
+
+* Map
+    * 검색할 수 있는 인터페이스
+    * 데이터를 삽입할 때 Key와 Value의 형태로 삽입되며, Key를 이용해서 Value를 얻을 수 있다.
+* Collection
+    * List
+        * 순서가 있는 Collection
+        * 데이터를 중복해서 포함할 수 있다.
+    * Set
+        * 집합적인 개념의 Collection
+        * 순서의 의미가 없다.
+        * 데이터를 중복해서 포함할 수 없다.
+* Collections Framework 선택 과정
+  1. Map과 Collection 인터페이스 중 선택
+    1-1. Collection 선택 시 사용 목적에 따라 List와 Set중 선택
+  2. 사용 목적에 따라 Map, List, Set 각각의 하위 구현체를 선택
+    2-1. Map: HashMap, LinkedHashMap, HashTable, TreeMap
+    2-2. List: LinkedList, ArrayList
+    2-3. Set: TreeSet, HashSet
+* Collections Framework 동기화
+    * [https://madplay.github.io/post/java-collection-synchronize](https://madplay.github.io/post/java-collection-synchronize)
+
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+
