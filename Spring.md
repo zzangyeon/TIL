@@ -114,3 +114,31 @@
 ### MVC 패턴이란
 
 > - []()
+
+### DI란
+- DI?
+    - Dependency Injection, 의존성 주입
+    - Dependency Injection은 Spring 프레임워크에서 지원하는 IoC의 형태이다. 
+    - DI는 클래스 사이의 의존관계를 빈 설정 정보를 바탕으로 컨테이너가 자동적으로 연결해주는 것을 말한다. 개발자들은 제어를 담당할 필요없이 빈 설정 파일에 의존관계가 필요하다는 정보만 추가해주면 된다.
+        - 컨테이너가 실행 흐름의 주체가 되어 애플리케이션 코드에 의존관계를 주입해주는 것.
+- 의존성(Dependency)
+    - 현재 객체가 다른 객체와 상호작용(참조)하고 있다면 다른 객체들을 현재 객체의 의존이라 한다.
+- 의존성이 위험한 이유
+    - 하나의 모듈이 바뀌면 의존한 다른 모듈까지 변경되야 한다.
+    - 테스트 가능한 어플을 만들 때 의존성이 있으면 유닛테스트 작성이 어렵다.
+    - 유닛테스트의 목적 자체가 다른 모듈로부터 독립적으로 테스트하는 것을 요구한다.
+- DI의 특징
+    - ‘new’를 사용해 모듈 내에서 다른 모듈을 초기화하지 않으려면 객체 생성은 다른 곳에서 하고, 생성된 객체를 참조하면 된다.
+    - 의존성 주입은 Inversion of Control 개념을 바탕으로 한다. 클래스가 외부로부터 의존성을 가져야한다.
+- DI가 필요한 이유(DI의 장점)
+    - 클래스를 재사용 할 가능성을 높이고, 다른 클래스와 독립적으로 클래스를 테스트 할 수 있다.
+    - 비즈니스 로직의 특정 구현이 아닌 클래스를 생성하는데 매우 효과적
+- DI의 세가지 방법
+    - Contructor Injection : 생성자 삽입
+    - Method(Setter) Injection : 메소드 매개 변수 삽입
+    - Field Injection : 멤버 변수 삽입
+
+> - [http://www.nextree.co.kr/p11247/](http://www.nextree.co.kr/p11247/)
+> - [http://wiki.javajigi.net/pages/viewpage.action?pageId=281](http://wiki.javajigi.net/pages/viewpage.action?pageId=281)
+> - [http://tony-programming.tistory.com/entry/Dependency-의존성-이란](http://tony-programming.tistory.com/entry/Dependency-의존성-이란) 
+
