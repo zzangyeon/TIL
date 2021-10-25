@@ -53,6 +53,7 @@
   - 빈 코드에 스프링 인터페이스는 노출되지 않지만, 코드만으로 초기화 메소드 호출 여부를 알 수 없는 단점
 
 #### Bean Scope
+
 * **singleton (default)**
   * 애플리케이션에서 Bean 등록 시 singleton scope로 등록
   * Spring IoC 컨테이너 당 한 개의 인스턴스만 생성
@@ -94,6 +95,7 @@
 
 
 ### IoC란
+
 - IoC(Inversion of Control, 제어의 역전)란
     - 객체의 생성에서부터 생명주기의 관리까지 모든 객체에 대한 제어권이 바뀐 것을 의미, 또는 제어 권한을 자신이 아닌 다른 대상에게 위임하는 것이다.
     - 이 방식은 대부분의 프레임워크에서 사용하는 방법으로, 개발자는 필요한 부분을 개발해서 끼워 넣기의 형태로 개발하고 실행하게 된다. 프레임워크가 이러한 구조를 가지기 때문에 개발자는 프레임워크에 필요한 부품을 개발하고 조립하는 방식의 개발을 하게 된다.
@@ -116,6 +118,7 @@
 > - []()
 
 ### DI란
+
 - DI?
     - Dependency Injection, 의존성 주입
     - Dependency Injection은 Spring 프레임워크에서 지원하는 IoC의 형태이다. 
@@ -143,6 +146,7 @@
 > - [http://tony-programming.tistory.com/entry/Dependency-의존성-이란](http://tony-programming.tistory.com/entry/Dependency-의존성-이란) 
 
 ### AOP란
+
 * AOP(Aspect Oriented Programming)란
   - Aspect Oriented Programming, 관점 지향 프로그래밍
   - 어떤 로직을 기준으로 핵심 관점과 부가 관점을 나누고, 관점을 기준으로 모듈화하는 것
