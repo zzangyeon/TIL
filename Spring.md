@@ -17,7 +17,7 @@
 * Spring Boot
 
 
-> :arrow_double_up:[Top](#9-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#9-spring)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+(https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://blog.naver.com/PostView.nhn?blogId=sthwin&logNo=221271008423&parentCategoryNo=&categoryNo=50&viewDate=&isShowPopularPosts=true&from=search](http://blog.naver.com/PostView.nhn?blogId=sthwin&logNo=221271008423&parentCategoryNo=&categoryNo=50&viewDate=&isShowPopularPosts=true&from=search)
 ### Bean이란
 * 컨테이너 안에 들어있는 객체
